@@ -1447,7 +1447,7 @@
           body: JSON.stringify(buildPayload())
         });
 
-        setMessage("success", "資料已送出，謝謝您的填寫。我們將依據您提供的資料進行初步需求判斷。");
+        setMessage("success", "資料已送出，謝謝您的填寫。我們將依據您提供的資料進行初步需求判斷。若後台未出現資料，請確認 Apps Script 是否已重新部署為最新版本。");
         form.reset();
       } catch (error) {
         setMessage("error", "資料送出失敗，請稍後再試，或直接聯繫AI管理賦能中心。");

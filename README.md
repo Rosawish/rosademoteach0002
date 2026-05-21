@@ -15,7 +15,7 @@
 ## 如何建立 Google Sheet
 
 1. 本專案目前設定寫入以下 Google Sheet：
-   `https://docs.google.com/spreadsheets/d/1OyTNDIlELIjO4xHGHiqMqCMUS2F9YTG6uirm1DtZ_4w/edit?usp=sharing`
+   `https://docs.google.com/spreadsheets/d/1OyTnDIlLJ04xHGhIqMqCMUS2F9YTG6uirm1DTz_4w/edit?usp=sharing`
 2. 將底部工作表命名為「表單回應」。
 3. 不一定要手動建立欄位，`apps-script.gs` 會自動建立標題列。
 
@@ -27,7 +27,7 @@
 4. `apps-script.gs` 已設定：
 
    ```js
-   const SPREADSHEET_ID = "1OyTNDIlELIjO4xHGHiqMqCMUS2F9YTG6uirm1DtZ_4w";
+   const SPREADSHEET_ID = "1OyTnDIlLJ04xHGhIqMqCMUS2F9YTG6uirm1DTz_4w";
    ```
 
    若未來更換 Google Sheet，請同步替換此 ID。
@@ -70,6 +70,17 @@
 2. 填寫表單。
 3. 送出。
 4. 回到 Google Sheet 檢查是否新增一列資料。
+
+## 表單送出成功但 Google Sheet 沒資料時的排查
+
+1. 先在 Apps Script 編輯器執行 `testWriteToSheet()`。
+2. 如果 `testWriteToSheet()` 可以寫入「測試公司」，代表 Sheet ID 與授權正常。
+3. 如果網站送出仍沒有資料，請重新部署 Apps Script Web App。
+4. Apps Script 改完後不能只按儲存，一定要「部署 → 管理部署作業 → 編輯 → 新增版本 → 部署」。
+5. 若重新部署後 Web App URL 改變，需回 `index.html` 更新 `SCRIPT_URL`。
+6. Web App 權限需設定：
+   - 執行身分：我
+   - 誰可以存取：任何人
 
 ## 注意事項
 

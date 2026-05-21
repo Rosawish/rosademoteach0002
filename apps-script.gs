@@ -1,5 +1,5 @@
+const SPREADSHEET_ID = "1OyTnDIlLJ04xHGhIqMqCMUS2F9YTG6uirm1DTz_4w";
 const SHEET_NAME = "表單回應";
-const SPREADSHEET_ID = "1OyTNDIlELIjO4xHGHiqMqCMUS2F9YTG6uirm1DtZ_4w";
 
 // 欄位標題會在工作表第一列自動建立，順序需與 appendRow 的資料順序一致。
 const HEADERS = [
@@ -53,44 +53,7 @@ function doPost(e) {
     const sheet = getOrCreateResponseSheet();
 
     ensureHeaderRow(sheet);
-
-    sheet.appendRow([
-      new Date(),
-      valueOf(payload, "company_name"),
-      valueOf(payload, "tax_id"),
-      valueOf(payload, "industry"),
-      valueOf(payload, "company_size"),
-      valueOf(payload, "contact_name"),
-      valueOf(payload, "job_title"),
-      valueOf(payload, "phone"),
-      valueOf(payload, "email"),
-      valueOf(payload, "location"),
-      valueOf(payload, "priority_departments"),
-      valueOf(payload, "other_departments"),
-      valueOf(payload, "ai_experience"),
-      valueOf(payload, "current_ai_tools"),
-      valueOf(payload, "work_items"),
-      valueOf(payload, "time_consuming_tasks"),
-      valueOf(payload, "has_repetitive_tasks"),
-      valueOf(payload, "ai_assistance_needs"),
-      valueOf(payload, "has_sop"),
-      valueOf(payload, "workflow_records"),
-      valueOf(payload, "has_existing_documents"),
-      valueOf(payload, "data_scattered"),
-      valueOf(payload, "priority_data_types"),
-      valueOf(payload, "pain_points"),
-      valueOf(payload, "top_three_issues"),
-      valueOf(payload, "business_impacts"),
-      valueOf(payload, "consultant_diagnosis"),
-      valueOf(payload, "needed_service"),
-      valueOf(payload, "implementation_timeline"),
-      valueOf(payload, "budget_status"),
-      valueOf(payload, "cooperation_types"),
-      valueOf(payload, "additional_notes"),
-      valueOf(payload, "privacy_agreement"),
-      valueOf(payload, "source_page"),
-      valueOf(payload, "submitted_at_client")
-    ]);
+    sheet.appendRow(buildResponseRow(payload));
 
     return createJsonResponse({
       status: "success",
@@ -102,6 +65,91 @@ function doPost(e) {
       message: error.toString()
     });
   }
+}
+
+// 可在 Apps Script 編輯器中手動執行，用來確認 Sheet ID、授權與寫入權限是否正常。
+function testWriteToSheet() {
+  const sheet = getOrCreateResponseSheet();
+  const payload = {
+    company_name: "測試公司",
+    tax_id: "00000000",
+    industry: "其他",
+    company_size: "1–10人",
+    contact_name: "測試聯絡人",
+    job_title: "測試職稱",
+    phone: "0912345678",
+    email: "test@example.com",
+    location: "測試地點",
+    priority_departments: "資訊部門",
+    other_departments: "",
+    ai_experience: "個人零星使用",
+    current_ai_tools: "測試工具",
+    work_items: "資料整理與報表產出",
+    time_consuming_tasks: "測試最耗時工作",
+    has_repetitive_tasks: "是",
+    ai_assistance_needs: "自動整理資料",
+    has_sop: "有部分SOP",
+    workflow_records: "Google Sheet",
+    has_existing_documents: "有部分資料",
+    data_scattered: "不確定",
+    priority_data_types: "SOP文件",
+    pain_points: "資料分散，查找不易",
+    top_three_issues: "測試問題一、測試問題二、測試問題三",
+    business_impacts: "工作效率下降",
+    consultant_diagnosis: "可以先提供建議方案",
+    needed_service: "尚不確定，需要顧問協助判斷",
+    implementation_timeline: "尚在評估",
+    budget_status: "需協助評估",
+    cooperation_types: "顧問診斷",
+    additional_notes: "這是 testWriteToSheet() 產生的測試資料。",
+    privacy_agreement: "同意",
+    source_page: "Apps Script testWriteToSheet",
+    submitted_at_client: new Date().toISOString()
+  };
+
+  ensureHeaderRow(sheet);
+  sheet.appendRow(buildResponseRow(payload));
+}
+
+// 依照 Google Sheet 欄位順序整理每一列資料。
+function buildResponseRow(payload) {
+  return [
+    new Date(),
+    valueOf(payload, "company_name"),
+    valueOf(payload, "tax_id"),
+    valueOf(payload, "industry"),
+    valueOf(payload, "company_size"),
+    valueOf(payload, "contact_name"),
+    valueOf(payload, "job_title"),
+    valueOf(payload, "phone"),
+    valueOf(payload, "email"),
+    valueOf(payload, "location"),
+    valueOf(payload, "priority_departments"),
+    valueOf(payload, "other_departments"),
+    valueOf(payload, "ai_experience"),
+    valueOf(payload, "current_ai_tools"),
+    valueOf(payload, "work_items"),
+    valueOf(payload, "time_consuming_tasks"),
+    valueOf(payload, "has_repetitive_tasks"),
+    valueOf(payload, "ai_assistance_needs"),
+    valueOf(payload, "has_sop"),
+    valueOf(payload, "workflow_records"),
+    valueOf(payload, "has_existing_documents"),
+    valueOf(payload, "data_scattered"),
+    valueOf(payload, "priority_data_types"),
+    valueOf(payload, "pain_points"),
+    valueOf(payload, "top_three_issues"),
+    valueOf(payload, "business_impacts"),
+    valueOf(payload, "consultant_diagnosis"),
+    valueOf(payload, "needed_service"),
+    valueOf(payload, "implementation_timeline"),
+    valueOf(payload, "budget_status"),
+    valueOf(payload, "cooperation_types"),
+    valueOf(payload, "additional_notes"),
+    valueOf(payload, "privacy_agreement"),
+    valueOf(payload, "source_page"),
+    valueOf(payload, "submitted_at_client")
+  ];
 }
 
 // 取得指定的 Google Sheet，並確保有指定名稱的工作表。
