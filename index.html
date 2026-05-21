@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 協助工作需求書撰寫與流程實作課程</title>
+  <meta name="description" content="AI 應用導入與工作流程實作課程互動式網頁，適合部署於 GitHub Pages。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "Noto Sans TC", sans-serif; }
+    .fade-in { animation: fadeIn .28s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .glass { backdrop-filter: blur(16px); }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-100 text-slate-900">
+  <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/85 glass">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 md:px-8">
+      <a href="#top" class="flex items-center gap-2 font-black tracking-tight text-slate-950">
+        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white">AI</span>
+        <span class="hidden sm:inline">工作流程實作課程</span>
+      </a>
+      <nav class="hidden items-center gap-5 text-sm font-semibold text-slate-600 md:flex">
+        <a href="#pillars" class="hover:text-slate-950">課程重點</a>
+        <a href="#builder" class="hover:text-slate-950">需求書檢核</a>
+        <a href="#cases" class="hover:text-slate-950">實作題目</a>
+        <a href="#flow" class="hover:text-slate-950">課程流程</a>
+        <a href="#outcomes" class="hover:text-slate-950">學習成果</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="relative overflow-hidden px-6 py-14 md:px-10 lg:px-16">
+      <div class="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-slate-200 blur-3xl"></div>
+      <div class="absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-slate-300 blur-3xl"></div>
+      <div class="relative mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div class="fade-in">
+          <div class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm">
+            <i data-lucide="users" class="h-4 w-4"></i>
+            就業學程 × AI 工作流程實作
+          </div>
+          <h1 class="mt-6 text-4xl font-black tracking-tight text-slate-950 md:text-6xl">AI 協助工作需求書撰寫與流程實作課程</h1>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-600">以能源體驗中心導覽、新人訓練手冊與企業工作流程為實作題目，帶領學生從需求定義、工作拆解、資料整理到成果產出，建立可銜接職場的 AI 應用能力。</p>
+          <div class="mt-8 grid gap-3 sm:grid-cols-3">
+            <div class="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200"><p class="text-3xl font-black">3hr</p><p class="mt-1 text-sm text-slate-500">現場實作導向</p></div>
+            <div class="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200"><p class="text-3xl font-black">20–30</p><p class="mt-1 text-sm text-slate-500">就業學程學生</p></div>
+            <div class="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200"><p class="text-3xl font-black">POC</p><p class="mt-1 text-sm text-slate-500">完成初步應用雛形</p></div>
+          </div>
+        </div>
+        <div class="fade-in rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl">
+          <p class="text-sm font-bold text-slate-500">課程總結</p>
+          <h2 class="mt-2 text-2xl font-black">先會拆工作，再談用工具。</h2>
+          <p class="mt-4 leading-7 text-slate-600">本課程不追求高階系統開發，而是讓學生理解：好的 AI 應用來自清楚需求、乾淨資料、明確流程與可檢核成果。</p>
+          <div class="mt-6 space-y-3">
+            <div class="flex gap-3 rounded-2xl bg-slate-50 p-3"><i data-lucide="check-circle-2" class="mt-1 h-5 w-5 flex-none"></i><p class="text-sm leading-6 text-slate-700">沒有清楚需求，就不會有好的 AI 應用成果。</p></div>
+            <div class="flex gap-3 rounded-2xl bg-slate-50 p-3"><i data-lucide="check-circle-2" class="mt-1 h-5 w-5 flex-none"></i><p class="text-sm leading-6 text-slate-700">沒有資料整理，就不會有穩定的 AI 輸出。</p></div>
+            <div class="flex gap-3 rounded-2xl bg-slate-50 p-3"><i data-lucide="check-circle-2" class="mt-1 h-5 w-5 flex-none"></i><p class="text-sm leading-6 text-slate-700">沒有流程拆解，就無法進行自動化。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pillars" class="px-6 py-10 md:px-10 lg:px-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+          <div><p class="text-sm font-bold text-slate-500">Course Pillars</p><h2 class="text-3xl font-black">六大課程重點</h2></div>
+          <p class="max-w-2xl text-sm leading-6 text-slate-500">點選卡片查看細部說明，協助授課者掌握本次課程的主軸與層次。</p>
+        </div>
+        <div class="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+          <div id="pillarCards" class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1"></div>
+          <article id="pillarDetail" class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="builder" class="px-6 py-10 md:px-10 lg:px-16">
+      <div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+        <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div><p class="text-sm font-semibold text-slate-500">互動檢核</p><h3 class="text-xl font-bold text-slate-900">工作需求書組成要素</h3></div>
+            <div id="completionBadge" class="rounded-full bg-slate-100 px-4 py-2 text-sm font-bold text-slate-700">完整度 86%</div>
+          </div>
+          <div class="mt-4 h-2 overflow-hidden rounded-full bg-slate-100"><div id="completionBar" class="h-full rounded-full bg-slate-900 transition-all" style="width:86%"></div></div>
+          <div id="requirementFields" class="mt-5 grid gap-3 md:grid-cols-2"></div>
+        </div>
+
+        <div id="cases" class="rounded-3xl border border-slate-200 bg-slate-900 p-6 text-white shadow-sm">
+          <p class="text-sm font-bold text-slate-300">Practice Cases</p>
+          <h2 class="mt-1 text-3xl font-black">三項建議實作題目</h2>
+          <div id="caseTabs" class="mt-5 flex flex-wrap gap-2"></div>
+          <article id="caseDetail" class="mt-6 rounded-3xl bg-white p-5 text-slate-900"></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="px-6 py-10 md:px-10 lg:px-16">
+      <div class="mx-auto max-w-7xl rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="mb-8 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+          <div><p class="text-sm font-bold text-slate-500">Teaching Flow</p><h2 class="text-3xl font-black">建議課程流程</h2></div>
+          <p class="max-w-2xl text-sm leading-6 text-slate-500">由觀念導入進入實作產出，最後以需求書與驗收標準檢視成果。</p>
+        </div>
+        <div id="flowGrid" class="grid gap-4 md:grid-cols-2 xl:grid-cols-7"></div>
+      </div>
+    </section>
+
+    <section id="outcomes" class="px-6 py-10 md:px-10 lg:px-16">
+      <div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm font-bold text-slate-500">Learning Outcomes</p>
+          <h2 class="mt-1 text-3xl font-black">學生應完成之學習成果</h2>
+          <div id="outcomesList" class="mt-6 space-y-3"></div>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-slate-950 p-6 text-white shadow-sm">
+          <p class="text-sm font-bold text-slate-300">Key Message</p>
+          <h2 class="mt-1 text-3xl font-black">課程關鍵觀念</h2>
+          <div id="keyIdeas" class="mt-6 grid gap-3"></div>
+          <div class="mt-6 rounded-3xl bg-white p-5 text-slate-900">
+            <h3 class="text-xl font-black">授課結論</h3>
+            <p class="mt-3 leading-7 text-slate-600">本次課程應以「AI 協助工作需求書撰寫與流程實作」為核心，透過實務題目讓學生從需求定義、工作拆解、資料整理到成果產出，建立可銜接職場的 AI 工作能力與流程思維。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white px-6 py-8 text-center text-sm text-slate-500">
+    <p>AI 協助工作需求書撰寫與流程實作課程｜互動式課程網頁</p>
+  </footer>
+
+  <script>
+    const pillars = [
+      { id: "positioning", title: "課程定位", icon: "target", tag: "定位", summary: "從工具操作提升到工作需求、流程拆解與成果產出。", details: ["本課程定位為 AI 應用導入與工作流程實作課程。", "重點不是單純介紹工具，而是讓學生理解 AI 如何支援需求分析、流程設計、資料整理、文件產出與初步成果開發。", "課程成果以可被職場立即理解與應用的工作產出為主。"] },
+      { id: "requirement", title: "需求書撰寫", icon: "clipboard-list", tag: "起點", summary: "先定義目的、對象、資料、流程、輸出與驗收標準。", details: ["需求書是 AI 應用開發與實作的起點。", "內容應包含任務目的、使用對象、應用情境、輸入資料、處理流程、預期成果、成果格式與驗收標準。", "若需求書未定義清楚，後續提示詞設計、工具選擇與流程設計都會失準。"] },
+      { id: "workflow", title: "工作拆解與流程設計", icon: "workflow", tag: "核心", summary: "將完整任務拆成可執行、可驗證、可分工的步驟。", details: ["學生需練習將任務拆解為資料蒐集、資料整理、重點歸納、文件產出、教材轉換、測驗設計與網頁呈現等步驟。", "拆解後才能判斷哪些工作可由 AI 協助，哪些仍需人工確認與判斷。", "流程設計也是後續自動化、教材化與系統化的前置基礎。"] },
+      { id: "data", title: "資料治理與知識管理", icon: "database", tag: "前提", summary: "沒有資料整理，就不會有穩定的 AI 輸出。", details: ["企業應用 AI 前，需確認資料是否完整、欄位是否一致、流程是否清楚、判斷邏輯是否可被描述。", "若企業尚未建立基本資料庫、流程規則與判斷標準，AI 無法直接產生穩定成果。", "本課程讓學生理解 AI 應用的前提是資料整理、知識結構化與流程標準化。"] },
+      { id: "practice", title: "公開資料與模擬資料實作", icon: "shield-check", tag: "安全", summary: "優先使用公開資料與模擬資料，避免企業敏感資料風險。", details: ["課堂原則上不使用企業內部敏感資料。", "可使用企業公開資訊、能源體驗中心公開資料或由 AI 產生之模擬資料進行練習。", "重點是讓學生理解流程設計與成果產出方法，而非依賴真實內部資料。"] },
+      { id: "poc", title: "POC 與正式導入差異", icon: "layers", tag: "成熟度", summary: "課堂可做雛形，但正式導入需驗證、維護與迭代。", details: ["課堂中可讓學生完成初步雛形或概念驗證成果。", "但 POC 不等於正式可用系統。", "企業正式導入仍需資料驗證、流程修正、測試、維護與使用者回饋。"] }
+    ];
+
+    const requirementFields = [
+      { id: "purpose", label: "任務目的", hint: "本任務要解決什麼問題？" },
+      { id: "users", label: "使用對象", hint: "誰會使用成果？學生、主管、客戶或新人？" },
+      { id: "scenario", label: "應用情境", hint: "何時、何地、何種工作情境會使用？" },
+      { id: "input", label: "輸入資料", hint: "需要哪些公開資料、模擬資料或既有文件？" },
+      { id: "process", label: "處理流程", hint: "資料如何被整理、轉換、審核與輸出？" },
+      { id: "output", label: "成果格式", hint: "要產出手冊、測驗、網頁架構或流程圖？" },
+      { id: "check", label: "驗收標準", hint: "如何判斷成果可用、正確且符合需求？" }
+    ];
+
+    const cases = [
+      { title: "能源體驗中心導覽與服務流程設計", label: "服務流程", output: "服務流程圖、導覽腳本、網頁內容架構、客戶體驗流程", steps: ["梳理參訪動線", "定義導覽重點", "設計 QR Code 進入後的互動內容", "產出網頁式導覽架構"] },
+      { title: "新人訓練手冊與技能訓練教材設計", label: "HR 教材", output: "新人訓練手冊、操作流程、注意事項、測驗題、漫畫式教材草案", steps: ["整理職務說明", "拆解工作流程", "轉換為訓練教材", "建立測驗題與標準答案"] },
+      { title: "工作需求書與 AI 實作流程設計", label: "需求分析", output: "需求書、提示詞架構、工具流程、初步成果樣張", steps: ["選定企業任務", "撰寫需求書", "設計提示詞", "完成初步成果並檢核"] }
+    ];
+
+    const flow = [
+      { title: "課程導入", desc: "說明 AI 應用與工作流程的關係", icon: "book-open" },
+      { title: "案例說明", desc: "說明企業導入前為何需做資料與流程盤點", icon: "monitor-smartphone" },
+      { title: "需求書教學", desc: "建立目的、對象、輸入、流程、輸出與驗收標準", icon: "file-text" },
+      { title: "工作拆解", desc: "將任務拆成可執行步驟與可檢核成果", icon: "workflow" },
+      { title: "工具應用", desc: "使用 GPT 或相關工具協助內容產出", icon: "play-circle" },
+      { title: "成果產出", desc: "完成流程設計、文件、教材或網頁內容架構", icon: "check-circle-2" },
+      { title: "成果檢視", desc: "確認是否符合需求書與驗收標準", icon: "graduation-cap" }
+    ];
+
+    const outcomes = [
+      "能說明 AI 應用不是單純下指令，而是需要先定義工作需求。",
+      "能撰寫一份基礎工作需求書。",
+      "能將企業任務拆解為具體流程步驟。",
+      "能使用 AI 協助整理資料、產出文件或設計教材。",
+      "能判斷哪些資料適合公開使用，哪些資料不應放入課堂操作。",
+      "能完成一項簡易 AI 應用雛形，例如導覽流程、訓練手冊、測驗題或網頁內容架構。",
+      "能理解 POC 與正式導入之間的差異。"
+    ];
+
+    const keyIdeas = [
+      "沒有清楚需求，就不會有好的 AI 應用成果。",
+      "沒有資料整理，就不會有穩定的 AI 輸出。",
+      "沒有流程拆解，就無法進行自動化。",
+      "企業 AI 導入本質上是知識管理與流程治理。",
+      "學生不需要一開始就做高階系統，而是要先學會需求分析、工作拆解與成果驗證。"
+    ];
+
+    let activePillar = pillars[0].id;
+    let selectedFields = ["purpose", "users", "input", "process", "output", "check"];
+    let activeCase = 0;
+
+    function icon(name, cls = "h-5 w-5") { return `<i data-lucide="${name}" class="${cls}"></i>`; }
+
+    function renderPillars() {
+      const cards = document.getElementById("pillarCards");
+      cards.innerHTML = pillars.map(item => {
+        const active = item.id === activePillar;
+        return `
+          <button type="button" aria-expanded="${active}" data-pillar="${item.id}" class="w-full rounded-2xl border p-4 text-left transition-all duration-200 ${active ? 'border-slate-900 bg-slate-900 text-white shadow-xl' : 'border-slate-200 bg-white hover:-translate-y-1 hover:shadow-lg'}">
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <span class="rounded-xl p-2 ${active ? 'bg-white/15' : 'bg-slate-100'}">${icon(item.icon)}</span>
+                <div><span class="text-xs font-semibold ${active ? 'text-slate-200' : 'text-slate-500'}">${item.tag}</span><h3 class="text-base font-bold">${item.title}</h3></div>
+              </div>
+              ${icon('chevron-down', `h-5 w-5 transition-transform ${active ? 'rotate-180' : ''}`)}
+            </div>
+            <p class="mt-3 text-sm leading-6 ${active ? 'text-slate-100' : 'text-slate-600'}">${item.summary}</p>
+          </button>`;
+      }).join('');
+
+      document.querySelectorAll('[data-pillar]').forEach(btn => btn.addEventListener('click', () => { activePillar = btn.dataset.pillar; renderPillars(); }));
+      renderPillarDetail();
+      lucide.createIcons();
+    }
+
+    function renderPillarDetail() {
+      const item = pillars.find(x => x.id === activePillar);
+      document.getElementById("pillarDetail").innerHTML = `
+        <div class="fade-in">
+          <div class="flex items-center gap-3">
+            <span class="rounded-2xl bg-slate-900 p-3 text-white">${icon(item.icon, 'h-6 w-6')}</span>
+            <div><p class="text-sm font-bold text-slate-500">${item.tag}</p><h3 class="text-2xl font-black">${item.title}</h3></div>
+          </div>
+          <p class="mt-5 text-lg leading-8 text-slate-700">${item.summary}</p>
+          <div class="mt-6 space-y-3">${item.details.map(detail => `<div class="rounded-2xl bg-slate-50 p-4 leading-7 text-slate-700">${detail}</div>`).join('')}</div>
+        </div>`;
+      lucide.createIcons();
+    }
+
+    function renderRequirementFields() {
+      const container = document.getElementById("requirementFields");
+      container.innerHTML = requirementFields.map(field => {
+        const active = selectedFields.includes(field.id);
+        return `<button type="button" data-field="${field.id}" class="rounded-2xl border p-4 text-left transition-all ${active ? 'border-slate-900 bg-slate-50' : 'border-slate-200 bg-white opacity-70'}">
+          <div class="flex items-center gap-2"><span class="flex h-5 w-5 items-center justify-center rounded-full border ${active ? 'border-slate-900 bg-slate-900 text-white' : 'border-slate-300'}">${active ? '✓' : ''}</span><span class="font-bold text-slate-900">${field.label}</span></div>
+          <p class="mt-2 text-sm leading-6 text-slate-600">${field.hint}</p>
+        </button>`;
+      }).join('');
+      document.querySelectorAll('[data-field]').forEach(btn => btn.addEventListener('click', () => {
+        const id = btn.dataset.field;
+        selectedFields = selectedFields.includes(id) ? selectedFields.filter(x => x !== id) : [...selectedFields, id];
+        updateCompletion();
+        renderRequirementFields();
+      }));
+      updateCompletion();
+    }
+
+    function updateCompletion() {
+      const pct = Math.round((selectedFields.length / requirementFields.length) * 100);
+      document.getElementById("completionBadge").textContent = `完整度 ${pct}%`;
+      document.getElementById("completionBar").style.width = `${pct}%`;
+    }
+
+    function renderCases() {
+      document.getElementById("caseTabs").innerHTML = cases.map((item, index) => `<button type="button" data-case="${index}" class="rounded-full px-4 py-2 text-sm font-bold transition ${activeCase === index ? 'bg-white text-slate-900' : 'bg-white/10 text-white hover:bg-white/20'}">${item.label}</button>`).join('');
+      document.querySelectorAll('[data-case]').forEach(btn => btn.addEventListener('click', () => { activeCase = Number(btn.dataset.case); renderCases(); }));
+      const item = cases[activeCase];
+      document.getElementById("caseDetail").innerHTML = `<div class="fade-in">
+        <p class="text-sm font-bold text-slate-500">${item.label}</p><h3 class="mt-1 text-2xl font-black">${item.title}</h3>
+        <p class="mt-4 rounded-2xl bg-slate-50 p-4 text-sm leading-6 text-slate-600"><span class="font-bold text-slate-900">預期產出：</span>${item.output}</p>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2">${item.steps.map((step, idx) => `<div class="rounded-2xl border border-slate-200 p-4"><p class="text-xs font-black text-slate-400">STEP ${idx + 1}</p><p class="mt-1 font-bold">${step}</p></div>`).join('')}</div>
+      </div>`;
+    }
+
+    function renderFlow() {
+      document.getElementById("flowGrid").innerHTML = flow.map((item, index) => `<div class="relative rounded-3xl bg-slate-50 p-4">
+        <div class="flex items-center justify-between"><span class="rounded-2xl bg-white p-3 shadow-sm">${icon(item.icon)}</span><span class="text-xs font-black text-slate-400">${String(index + 1).padStart(2, '0')}</span></div>
+        <h3 class="mt-4 font-black">${item.title}</h3><p class="mt-2 text-sm leading-6 text-slate-600">${item.desc}</p>
+      </div>`).join('');
+    }
+
+    function renderOutcomes() {
+      document.getElementById("outcomesList").innerHTML = outcomes.map((item, index) => `<div class="flex gap-3 rounded-2xl bg-slate-50 p-4"><span class="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-slate-900 text-sm font-black text-white">${index + 1}</span><p class="leading-7 text-slate-700">${item}</p></div>`).join('');
+      document.getElementById("keyIdeas").innerHTML = keyIdeas.map(item => `<div class="rounded-2xl bg-white/10 p-4 leading-7 text-slate-100">${item}</div>`).join('');
+    }
+
+    renderPillars();
+    renderRequirementFields();
+    renderCases();
+    renderFlow();
+    renderOutcomes();
+    lucide.createIcons();
+  </script>
+</body>
+</html>
