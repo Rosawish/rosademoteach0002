@@ -1,4 +1,5 @@
 const SHEET_NAME = "表單回應";
+const SPREADSHEET_ID = "1OyTNDIlELIjO4xHGHiqMqCMUS2F9YTG6uirm1DtZ_4w";
 
 // 欄位標題會在工作表第一列自動建立，順序需與 appendRow 的資料順序一致。
 const HEADERS = [
@@ -103,9 +104,9 @@ function doPost(e) {
   }
 }
 
-// 取得目前 Apps Script 綁定的試算表，並確保有指定名稱的工作表。
+// 取得指定的 Google Sheet，並確保有指定名稱的工作表。
 function getOrCreateResponseSheet() {
-  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
   let sheet = spreadsheet.getSheetByName(SHEET_NAME);
 
   if (!sheet) {

@@ -14,7 +14,8 @@
 
 ## 如何建立 Google Sheet
 
-1. 建立一份新的 Google Sheet。
+1. 本專案目前設定寫入以下 Google Sheet：
+   `https://docs.google.com/spreadsheets/d/1OyTNDIlELIjO4xHGHiqMqCMUS2F9YTG6uirm1DtZ_4w/edit?usp=sharing`
 2. 將底部工作表命名為「表單回應」。
 3. 不一定要手動建立欄位，`apps-script.gs` 會自動建立標題列。
 
@@ -23,6 +24,13 @@
 1. 在 Google Sheet 點選「擴充功能」→「Apps Script」。
 2. 貼上 `apps-script.gs` 的內容。
 3. 儲存專案。
+4. `apps-script.gs` 已設定：
+
+   ```js
+   const SPREADSHEET_ID = "1OyTNDIlELIjO4xHGHiqMqCMUS2F9YTG6uirm1DtZ_4w";
+   ```
+
+   若未來更換 Google Sheet，請同步替換此 ID。
 
 ## 如何部署為網頁應用程式
 
@@ -67,5 +75,6 @@
 
 - GitHub Pages 是靜態網站，不能直接儲存表單資料，因此需透過 Google Apps Script 寫入 Google Sheet。
 - Google Apps Script Web App URL 若重新部署，可能需要更新 `index.html` 的 `SCRIPT_URL`。
+- Google Apps Script 需有指定 Google Sheet 的存取權，否則無法寫入資料。
 - 若欄位有變更，需同步調整 `index.html` 與 `apps-script.gs`。
 - 表單涉及企業聯絡資訊與個資，請勿公開 Google Sheet 權限。
